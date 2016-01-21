@@ -1,3 +1,13 @@
+'''
+Thoughts:
+
+dfs problem
+Use depth as an indicator for existing recursion
+When two or three digits are used as one segment, check whether segment begins with '0' or '00'
+Specifically, number formed by three digits should not exceed 255
+
+
+'''
 class Solution:
 	def restoreIpAddresses(self, s):
 		self.res = set()
