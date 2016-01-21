@@ -1,3 +1,13 @@
+'''
+Thoughts:
+
+dfs problem
+If right < left, the current generated parenthesis is invalid
+Use the numbers of left and right bracket allowed as indicators
+If both right and left are zero, append current generated parenthesis to the result
+Otherwise, enter next level recursion
+
+'''
 class Solution:
 	def generateParenthesis(self, n):
 		self.res = []
