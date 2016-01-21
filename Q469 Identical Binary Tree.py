@@ -1,3 +1,15 @@
+'''
+Thoughts:
+
+dfs problem
+Criteria:
+a == b == None --> same
+a == None, b != None or vice versa --> False
+a.val != b.val --> False
+a.val == b.val --> compare a.left to b.left, a.right to b.right
+
+'''
+
 class TreeNode:
 	def __init__(self, val):
 		self.val = val
