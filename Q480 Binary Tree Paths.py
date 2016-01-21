@@ -1,3 +1,16 @@
+'''
+Thoughts:
+
+dfs problem
+Pay attention to the definition of leaf
+A node is only a leaf when:
+1. node != None
+2. node.left == node.right == None
+Such criteria would be the indicator for exiting the recursion
+When updating the "cur" array, append str(number) instead of number, which makes it easier when using '->'.join()
+
+'''
+
 class TreeNode:
 	def __init__(self, val):
 		self.val = val
