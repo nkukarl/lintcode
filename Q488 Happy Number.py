@@ -1,3 +1,13 @@
+'''
+Thoughts:
+
+Create an 'exist' array to store the numbers that are not equal to 1 when doing the repetitive square and sum computation
+If a computed number already exists in the 'exist' array, a loop has formed, which means the number is unhappy
+Otherwise, return True
+helper() does the repetitive computation
+
+'''
+
 class Solution:
 	def isHappy(self, n):
 		if n == 1:
