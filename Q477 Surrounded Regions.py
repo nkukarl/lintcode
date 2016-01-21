@@ -1,3 +1,15 @@
+'''
+Thoughts:
+
+dfs problem
+When recursive search reaches the edges or the current position is not 'O', exit the recursion
+Deal with the edges of the board, extend all the 'O's on the edges in four directions and change them into '$'
+After dealing with the edges, use two pass method
+1. Change all the 'O's into 'X' since they are not affected when dealing with the edges, implying they are surrounded by 'X's
+2. Change all the '$'s back into 'O'
+
+'''
+
 class Solution:
 	def surroundedRegions(self, board):
 		if board:
