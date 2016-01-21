@@ -1,3 +1,13 @@
+'''
+Thoughts:
+
+dfs problem
+isPalindrome() determines whether a string is palindromic
+For string s, any palindromic string starting from the beginning shall be added to "cur", the remaining string then goes into the next level recursion
+When s is None, exit the recursion
+
+'''
+
 class Solution:
 	def partition(self, s):
 		self.res = []
