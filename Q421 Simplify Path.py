@@ -1,3 +1,16 @@
+'''
+Thoughts:
+
+Stack
+Split the path using '/'
+Iterate the path,
+pop out the top element from stack if meets '..'
+do nothing if meets '.' or empty string
+push others to the stack
+return '/' plus the elements in the stack joined together
+
+'''
+
 class Solution:
 	def simplifyPath(self, path):
 		path = path.split('/')
