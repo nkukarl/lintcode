@@ -1,3 +1,7 @@
+'''
+Trivial
+'''
+
 class Solution:
 	def replaceBlank(self, string, length):
 		string = [char for char in string]
