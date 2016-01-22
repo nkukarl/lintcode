@@ -1,3 +1,17 @@
+'''
+Thoughts:
+
+Iterate the tokens:
+If token is a number, push it to the stack
+If token is an operator, pop the top two numbers, perform calculation and push the result back to the stack
+Pop the last element when the iteration ends
+If stack is empty, RPN is valid, return the final result
+
+Be careful '-X'.isdigit() returns False
+use try and except instead
+
+'''
+
 class Solution:
 	def evalRPN(self, tokens):
 		stack = []
