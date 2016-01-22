@@ -1,3 +1,14 @@
+'''
+Thoughts:
+
+dfs problem
+root == None is the condition for exit the recursion
+if root != None, swap the inverted left tree and right tree
+
+N.B. sortedArrayToBST() is only used to create a tree for test purpose
+because I am lazy:)
+
+'''
 class TreeNode:
 	def __init__(self, val):
 		self.val = val
