@@ -1,3 +1,11 @@
+'''
+Thoughts:
+
+Iterate through grid, if 1 is found, use helper() to mark current position as 0 and extend to up, down, left and right directions
+When new position reaches outside the grid or value in new position is not 1, exit
+
+'''
+
 class Solution:
 	def numIslands(self, grid):
 		if not grid:
