@@ -1,3 +1,15 @@
+'''
+Thoughts:
+
+Two level iterations
+Summarise the statistics using summary dictionary
+Initialised dictionary with points with inf slope equal to 0 and duplicated points equal to 1 (itself)
+If two points have same x and y, duplicated points number plus 1
+If only two xs are equal, points with inf slope plus 1
+Update max points by comparing res with max(summary.values()) + dupPts in the outer level iterations
+
+'''
+
 class Point:
 	def __init__(self, a = 0, b = 0):
 		self.x, self.y = a, b
