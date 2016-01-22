@@ -1,3 +1,13 @@
+'''
+Thoughts:
+
+Trivial
+A pythonic way would be
+numerator = sum([a * b for a, b in zip(A, B)])
+denom = sum([a * b for a, b in zip(A, A)]) ** 0.5 * sum([a * b for a, b in zip(B, B)]) ** 0.5
+
+'''
+
 class Solution:
 	def cosineSimilarity(self, A, B):
 		if len(A) != len(B):
