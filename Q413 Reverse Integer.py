@@ -1,3 +1,13 @@
+'''
+Thoughts:
+
+Record the sign
+Reverse abs(n) using str functions
+Return integer multiplied by sign
+Be careful with overflow since the numbers are limited to 32 bits
+
+'''
+
 class Solution:
 	def reverseInteger(self, n):
 		if n == 0:
