@@ -1,3 +1,15 @@
+'''
+Thoughts:
+
+Use a to represent the longer one of a and b
+Initially, carry is 0
+Iterate all the bits of a and b, keep updating the bits and carry
+When done with b, keep updating the bits of a and carry
+When done with a, if carry is 1, append 1
+Convert the result to string
+
+'''
+
 class Solution:
 	def addBinary(self, a, b):
 		if len(b) > len(a):
