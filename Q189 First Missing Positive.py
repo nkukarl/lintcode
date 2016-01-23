@@ -1,3 +1,14 @@
+'''
+Thoughts:
+
+If 0 is not in A, append 0 to A
+
+Iterate all the numbers in A, keep swapping elements until A[i] = A[A[i]]
+Iterate all the numbers again, return the first element where A[i] != A[A[i]]
+If exiting the iteration without returning anything, return the length of A
+
+'''
+
 class Solution:
 	def firstMissingPositive(self, A):
 		if 0 not in A:
