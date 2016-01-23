@@ -1,3 +1,11 @@
+'''
+Thoughts:
+
+helper() returns the longest increasing continuous subsequence from left to right by recording the current length and making comparison between current value and previous value
+Run helper() twice for A and reverse A and return the larger of the two results
+
+'''
+
 class Solution:
 	def longestIncreasingContinuousSubsequence(self, A):
 		if not A:
