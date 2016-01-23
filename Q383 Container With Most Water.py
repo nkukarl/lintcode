@@ -1,3 +1,14 @@
+'''
+Thoughts:
+
+Use two pointers, left and right
+Calculating the current rectangle area by using the difference of right and left and the smaller of height right and height left
+If left height < right height, left plus 1
+If right height < left height, right minus 1
+If left height == right height, left plus 1 and right minus 1
+
+'''
+
 class Solution:
 	def maxArea(self, heights):
 		left, right = 0, len(heights) - 1
