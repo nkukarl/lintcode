@@ -1,3 +1,12 @@
+'''
+Thoughts:
+
+Sort intervals based on the start time of each interval
+Iterate the intervals, if the start time of current interval is smaller than or equal to the end time of previous interval, update the end time of previous interval to the max of the end time of the previous and current interval
+Else, append current interval to res
+
+'''
+
 class Interval:
 	def __init__(self, start, end):
 		self.start = start
