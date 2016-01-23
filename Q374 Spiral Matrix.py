@@ -1,3 +1,12 @@
+'''
+Thoughts:
+
+Record the position of top, bottom, left and right
+Use dir to record the direction that the spiral shall go
+dir plus 1 and mod 4 at the end of each iteration
+
+'''
+
 class Solution:
 	def spiralOrder(self, matrix):
 		if not matrix:
@@ -5,17 +14,17 @@ class Solution:
 		top, bottom = 0, len(matrix) - 1
 		left, right = 0, len(matrix[0]) - 1
 		res = []
-		direction = 0
+		dir = 0
 		while top <= bottom and left <= right:
-			if direction == 0:
+			if dir == 0:
 				for col in range(left, right + 1):
 					res.append(matrix[top][col])
 				top += 1
-			elif direction == 1:
+			elif dir == 1:
 				for row in range(top, bottom + 1):
 					res.append(matrix[row][right])
 				right -= 1
-			elif direction == 2:
+			elif dir == 2:
 				for col in range(right, left - 1, -1):
 					res.append(matrix[bottom][col])
 				bottom -= 1
@@ -23,7 +32,7 @@ class Solution:
 				for row in range(bottom, top - 1, -1):
 					res.append(matrix[row][left])
 				left += 1
-			direction = (direction + 1) % 4
+			dir = (dir + 1) % 4
 
 		return res
 
