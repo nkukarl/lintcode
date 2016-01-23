@@ -1,3 +1,12 @@
+'''
+Thoughts:
+
+Sort B and iterate all the integers in A, do a binary search in B
+Find where each digit in A shall be inserted in B and find the smallest difference between each digit in A and the previous digit or the next digit in B
+Keep monitoring the smallest difference
+
+'''
+
 class Solution:
 	def smallestDifference(self, A, B):
 		B.sort()
