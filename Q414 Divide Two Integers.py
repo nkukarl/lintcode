@@ -1,3 +1,20 @@
+'''
+Thoughts:
+
+Bit manipulation
+
+Record the sign
+Convert dividend and divisor to abs
+Left shift 1 and divisor until divisor > dividend
+The number of right shifts determines how many time 1 is doubled
+Keep right shifting divisor and compare dividend and divisor,
+If dividend >= divisor, add the value to corresponding right shifted "1" to result, dividend -= divisor
+Right shift "1" and divisor
+
+Multiply res by the sign and be careful with overflow issue
+
+'''
+
 class Solution:
 	def divide(self, dividend, divisor):
 		if divisor == 0:
