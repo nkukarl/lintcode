@@ -1,3 +1,12 @@
+'''
+Thoughts:
+
+getLength() returns the length of each list
+discard the first several nodes of the longer list so that the two list have identical length
+Iterate the nodes in the two lists and compare the value of two nodes
+
+'''
+
 class ListNode:
 	def __init__(self, val, next = None):
 		self.val = val
