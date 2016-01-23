@@ -1,3 +1,12 @@
+'''
+Thoughts:
+
+Trivial
+Use a and b to record previous and previous previous
+Keep updating a and b
+
+'''
+
 class Solution:
 	def fibonacci(self, n):
 		n -= 1
