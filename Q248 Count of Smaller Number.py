@@ -1,3 +1,17 @@
+'''
+Thoughts:
+
+Loop solution is trivial
+
+Sort nums and each query do a binary search to find out the insertion position
+
+Build segment tree using node with three attributes, start, end and count
+Start and end ranges from 0 to 10000, count is initialised with 0 for each node
+Iterate all the integers in nums, update the count for each node
+For each query, do a query in the segment tree
+
+'''
+
 class Solution_binarySearch:
 	def countOfSmallerNumber(self, nums, queries):
 		nums.sort()
