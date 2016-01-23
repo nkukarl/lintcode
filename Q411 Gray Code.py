@@ -1,3 +1,12 @@
+'''
+Thoughts:
+
+Reverse the result of lower level
+Add 2 ** (current level number - 1) to the reversed results elementwise
+Append temporary numbers to the result of lower level
+
+'''
+
 class Solution:
 	def grayCode(self, n):
 		res = [0]
