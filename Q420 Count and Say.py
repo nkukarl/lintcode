@@ -1,3 +1,13 @@
+'''
+
+Store the current number and the occurrence using curVal and counter
+If same curVal is met, counter plus 1
+If different curVal is met, append current counter and curVal to res and reset the counter to 1
+
+When existing the loop, remember to add the counter and curVal outside the loop
+
+'''
+
 class Solution:
 	def countAndSay(self, n):
 		res = '1'
