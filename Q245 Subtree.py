@@ -1,3 +1,14 @@
+'''
+Thoughts:
+
+isSametree() determines whether two trees are identical
+If T2 is None, then T2 is a subtree of T1
+If T2 is not None and T1 is None, T2 is not a subtree of T1
+T2 is identical to T1, then T2 is a subtree of T1
+Else, check whether T2 is a subtree of T1.left or T1.right
+
+'''
+
 class TreeNode:
 	def __init__(self, val):
 		self.val = val
