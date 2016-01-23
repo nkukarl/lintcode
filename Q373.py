@@ -1,14 +1,22 @@
+'''
+Thoughts:
+
+Use left and right pointer, left always searches for odd numbers and right always searches for even numbers
+Swap the value at left and right until left >= right
+
+'''
+
 class Solution:
-	def partitionArray(self, nums):
-		slow = 0
-		while slow < len(nums) and nums[slow] % 2 == 1:
-			slow += 1
-		fast = slow + 1
-		while fast < len(nums):
-			if nums[fast] % 2 == 1:
-				nums[slow], nums[fast] = nums[fast], nums[slow]
-				slow += 1
-			fast += 1
+	def partitionArray(self, A):
+		if not A:
+			return
+		left, right = 0, len(A) - 1
+		while left < right:
+			while left < right and A[left] % 2 == 1:
+				left += 1
+			while right > left and A[right] % 2 == 0:
+				right -= 1
+			A[left], A[right] = A[right], A[left]
 
 import random
 nums = [1, 2, 3, 4, 5, 6, 7, 8]
