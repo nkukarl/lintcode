@@ -1,3 +1,14 @@
+'''
+Thoughts:
+
+Trivial
+
+Initialise prev to None, cur to head
+Iterate the list, store cur.next first
+Set cur.next to prev, update prev to cur and then let cur = next
+
+'''
+
 class ListNode:
 	def __init__(self, val, next = None):
 		self.val = val
