@@ -13,7 +13,7 @@ Preorder traversal shall return preorder = [1, 2, 4, 5, 3, 6, 7]
 Inorder traversal shall return inorder = [4, 2, 5, 1, 6, 3, 7]
 
 If preorder or inorder is empty, return None
-The first number in P shall go to the root, locate this element in inorder, mark is position as pos
+The first number in preorder shall go to the root, locate this element in inorder, mark is position as pos
 In preorder, index 1 to pos (inclusive) shall go to preorderLeft, index pos + 1 to the end shall go to preorderRight
 preorderLeft and inorderLeft shall form the left of current root
 In inorder, index 1 to pos - 1(inclusive) shall go to inorderLeft, index pos + 1 to the end shall go to inorderRight
