@@ -1,3 +1,15 @@
+'''
+Thoughts:
+
+Serialise the tree using level order traversal
+The only difference is when root is None, append('#')
+
+Deserialise by creating an array containing all the nodes created by TreeNode
+Use two pointers to record the current position of root and leave, assign the relation
+
+
+'''
+
 class TreeNode:
 	def __init__(self, val):
 		self.val = val
