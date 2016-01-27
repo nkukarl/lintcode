@@ -1,3 +1,16 @@
+'''
+Thoughts:
+
+Append 0 to height to force popping out stack at the end
+Initialise stack with [-1]
+
+Iterate all the elements in height
+If height is greater than or equal to height[stack[-1]], append the index of element to stack
+Else, popping out the last element of stack, calculate the size the rectangle, update the maximum size, until height is greater than or equal to height[stack[-1]]
+When calculating the size of the rectangle, the length of the rectangle is height[stack.pop()], the width of the rectangle is the difference between current element index and the index at the current stack top, don't forget to minus 1
+
+'''
+
 class Solution:
 	def largestRectangleArea(self, height):
 		stack = [-1]
