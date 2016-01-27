@@ -1,3 +1,19 @@
+'''
+Thoughts:
+
+Non-optimised solution is trivial, yet TLE
+
+Optimised solution is based on threeSum()
+Sort nums first
+For each index i, the newTarget is the target minus nums[i],
+Let left and right be the i + 1 and the last index
+If nums[left] + nums[right] == newTarget, narrow both
+Else increase left by 1 if less than newTarget
+Decrease right by 1 if greater than newTarget
+Loop through the results obtained from threeSum, and append the first number in fourSum to give the final result
+
+'''
+
 class Solution:
 	def fourSum(self, nums, target):
 		nums.sort()
