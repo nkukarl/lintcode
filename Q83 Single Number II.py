@@ -1,3 +1,14 @@
+'''
+Thoughts:
+
+Initialise summary with [0] * 32
+Iterate all the numbers in A, for each n, check all of its bits and update summary array
+Mod every elements of summary array by 3
+Let val = 1 and ans = 0
+Iterate all the elements in summary array, add current val to ans if the element is 1, double val at the end of each iteration
+
+'''
+
 class Solution:
 	def singleNumberII(self, A):
 		summary = [0] * 32
