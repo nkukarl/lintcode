@@ -1,3 +1,14 @@
+'''
+Thoughts:
+
+Iterate all the characters in board, if board[r][c] equal to word[0:], enter helper function with r, c and word[1:]
+When r or c exceeds the edges, exit helper function
+If the first letter of current word can be found by extending position [r][c] in any direction, enter helper function with updated r, c and word
+Valid array is used to record whether a certain character has been used already when searching for the word
+
+
+'''
+
 class Solution:
 	def exist(self, board, word):
 		if not word:
