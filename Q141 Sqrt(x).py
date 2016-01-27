@@ -1,3 +1,12 @@
+'''
+
+Newton method
+
+a = (a + x / a) / 2
+Set a precision to exit the iteration
+
+'''
+
 class Solution:
 	def sqrt(self, x):
 		if x <= 0:
