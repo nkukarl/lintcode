@@ -1,3 +1,10 @@
+'''
+Thoughts:
+
+DFS problem
+
+'''
+
 class Solution_recursion:
 	def permute(self, nums):
 		if not nums:
