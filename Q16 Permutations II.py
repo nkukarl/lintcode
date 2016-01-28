@@ -1,3 +1,10 @@
+'''
+Thought:
+
+DFS
+Remember to sort nums and use set to remove duplicates
+
+'''
 class Solution:
 	def permuteUnique(self, nums):
 		if not nums:
