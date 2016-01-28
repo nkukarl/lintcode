@@ -1,3 +1,10 @@
+'''
+Thoughts:
+
+Simple binary search
+
+'''
+
 class Solution:
 	def binarySearch(self, nums, target):
 		if not nums:
