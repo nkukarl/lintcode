@@ -1,3 +1,11 @@
+'''
+Thoughts:
+
+DFS problem
+Use set to remove duplicates
+
+'''
+
 class Solution:
 	def subsetsWithDup(self, nums):
 		nums.sort()
