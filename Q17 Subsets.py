@@ -1,3 +1,10 @@
+'''
+Thoughts:
+
+DFS problem
+
+'''
+
 class Solution:
 	def subsets(self, nums):
 		nums.sort()
