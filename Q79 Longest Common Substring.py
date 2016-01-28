@@ -1,3 +1,5 @@
+
+
 class Solution:
 	def longestCommonSubstring(self, A, B):
 		res = 0

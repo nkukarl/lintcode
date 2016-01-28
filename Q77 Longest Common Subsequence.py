@@ -1,3 +1,19 @@
+'''
+Thought:
+
+Dynamic programming
+
+Initialise dp with n + 1 columns and m + 1 rows
+Let dp[i][j] represent the longest common subsequence of A[:i + 1] and B[:j + 1]
+Transfer function:
+If A[i - 1] == B[j - 1], dp[i][j] = dp[i - 1][j - 1] + 1
+Otherwise, dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+
+Return the last element of dp
+
+
+'''
+
 class Solution:
 	def longestCommonSubsequence(self, A, B):
 		m, n = len(A), len(B)
