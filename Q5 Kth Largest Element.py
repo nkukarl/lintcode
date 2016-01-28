@@ -1,3 +1,14 @@
+'''
+Thoughts:
+
+Randomly choose a number from A as pivot
+Initialise three empty arrays, A1, A2 and A3 to store the numbers greater than pivot, smaller than pivot and equal to pivot by iterating all the elements in A
+If A1 contains k or more numbers, return kthLargestElement(k, A1)
+Elif A1 and A3 contain less than k numbers, return kthLargestElement(k - (len(A1) + len(A3)), A2)
+Otherwise, return pivot
+
+'''
+
 import random
 class Solution:
 	def kthLargestElement(self, k, A):
