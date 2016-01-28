@@ -1,3 +1,12 @@
+'''
+Thoughts:
+
+Carry out two binary searches, one for the last element of each row in the matrix to locate the row
+The second binary search searches for the target in the located row
+Compare the number at the obtained location with the target
+
+'''
+
 class Solution:
 	def searchMatrix(self, matrix, target):
 		if not matrix:
