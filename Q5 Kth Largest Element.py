@@ -2,17 +2,19 @@ import random
 class Solution:
 	def kthLargestElement(self, k, A):
 		pivot = random.choice(A)
-		A1, A2 = [], []
+		A1, A2, A3 = [], [], []
 		for n in A:
 			if n > pivot:
 				A1.append(n)
-			else:
+			elif n < pivot:
 				A2.append(n)
-		if len(A1) == k - 1:
-			return pivot
-		if len(A1) > k - 1:
+			else:
+				A3.append(n)
+		if len(A1) >= k:
 			return self.kthLargestElement(k, A1)
-		return self.kthLargestElement(k - len(A1), A2)
+		if len(A1) + len(A3) < k:
+			return self.kthLargestElement(k - (len(A1) + len(A3)), A2)
+		return pivot
 		
 	def kthLargestElement_builtin(self, k, A):
 		A.sort(reverse = True)

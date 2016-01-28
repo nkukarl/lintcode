@@ -33,8 +33,8 @@ class Solution:
 			res += str(i)
 		return res.count(str(k))
 
-k = 5
-num = 28375
+k = 0
+num = 100
 
 inst = Solution()
 
