@@ -1,3 +1,14 @@
+'''
+Thoughts:
+
+Use helper() to get the elements which meet the criteria
+If not root, return
+If root.val is smaller than k1, get elements in the right subtree of root
+Elif root.val is greater than k2, get elements in the left subtree of root
+Otherwise, get elements in the left subtree of root, append the value of root to res, and then get elements in the right subtree of root
+
+'''
+
 class TreeNode:
 	def __init__(self, val):
 		self.val = val
