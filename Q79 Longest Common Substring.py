@@ -1,23 +1,33 @@
+'''
+Thought:
 
+Dynamic programming
+
+Initialise dp with n + 1 columns and m + 1 rows, maxLen to 0
+Let dp[i][j] represent the longest common substring of A[:i + 1] and B[:j + 1]
+Transfer function:
+If A[i - 1] == B[j - 1], dp[i][j] = dp[i - 1][j - 1] + 1, update maxLen
+Otherwise, dp[i][j] = 0
+
+return maxLen
+
+
+'''
 
 class Solution:
 	def longestCommonSubstring(self, A, B):
-		res = 0
 		m, n = len(A), len(B)
-		for i in range(m):
-			tmp = ''
-			for j in range(n):
-				a, b = A[i], B[j]
-				if A[i] == B[j]:
-					k1, k2 = i, j
-					while k1 < m and k2 < n and A[k1] == B[k2]:
-						c, d = A[k1], B[k2]
-						tmp += A[k1]
-						k1 += 1
-						k2 += 1
-					res = max(res, len(tmp))
-					tmp = ''
-		return res
+		dp = [[0] * (n + 1) for _ in range(m + 1)]
+		maxLen = 0
+		for i in range(1, m + 1):
+			for j in range(1, n + 1):
+				if A[i - 1] == B[j - 1]:
+					dp[i][j] = dp[i - 1][j - 1] + 1
+					maxLen = max(dp[i][j], maxLen)
+				else:
+					dp[i][j] = 0
+		
+		return maxLen
 
 # A, B = 'ABCD', 'BCD'
 
