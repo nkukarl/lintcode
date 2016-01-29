@@ -1,3 +1,13 @@
+'''
+Thoughts:
+
+Initialise summary dictionary to {0: -1} and cur to 0
+Iterate all the elements in nums, and add it to cur
+If cur already exists in summary, it means the sum of elements in between is zero
+Hence, the left shall be summary[cur] + 1 and the right is current index: i (inclusive)
+
+'''
+
 class Solution:
 	def subarraySum(self, nums):
 		summary = {0: -1}
