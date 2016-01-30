@@ -1,6 +1,8 @@
 '''
 Thoughts:
 
+Similar to one solution of Q104 Merge k Sorted Lists
+
 Define MinHeap class with push(), pop() and top() methods
 push() will add new elements to mh (instance of MinHeap) and update the elements in mh to make it remain valid using __up()
 pop() will remove the root element of mh and update the elements in mh to make it remain valid using __down()

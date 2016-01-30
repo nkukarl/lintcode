@@ -104,6 +104,15 @@ class Solution_opt:
 # head2 = lst2[0]
 
 
+
+'''
+Thoughts:
+
+Recursively split lists into two sublists
+If a sublist has only one element, directly return the element
+Use mergeList to merge two lists and return the merged list recursively
+
+'''
 class Solution_opt:
 	def mergeKLists(self, lists):
 		if not lists:
@@ -144,4 +153,106 @@ head = inst.mergeKLists([head1, head2])
 while head:
 	print(head.val, end = ' ')
 	head = head.next
+print()
+
+
+'''
+Thoughts:
+
+Similar to Q401 Kth Smallest Number in Sorted Matrix
+
+Since each list has been sorted, for each non-empty list, it shall be pushed to mh (an instance of MinHeap)
+While mh is not empty, pop the root element and denote it as tmp
+Append tmp to the new list, starts with dummy
+If tmp.next is not None, push tmp.next to mh
+Return dummy.next
+
+'''
+
+# class ListNode(object):
+#     def __init__(self, val, next = None):
+#         self.val = val
+#         self.next = next
+
+class MinHeap:
+    def __init__(self):
+        self.A = []
+
+    def push(self, element):
+        self.A.append(element)
+        self.__up(len(self.A) - 1)
+
+    def __up(self, i):
+        if i <= 0:
+            return
+        parentId = (i - 1) // 2
+        if self.A[i].val < self.A[parentId].val:
+            self.A[i], self.A[parentId] = self.A[parentId], self.A[i]
+            self.__up(parentId)
+
+    def pop(self):
+        if not self.A:
+            return
+        self.A[0], self.A[-1] = self.A[-1], self.A[0]
+        tmp = self.A.pop()
+        self.__down(0)
+        return tmp
+
+    def __down(self, i):
+        if i >= len(self.A):
+            return
+        leftId, rightId = 2 * i + 1, 2 * i + 2
+        if leftId >= len(self.A):
+            left = 2 ** 31
+        else:
+            left = self.A[leftId].val
+        if rightId >= len(self.A):
+            right = 2 ** 31
+        else:
+            right = self.A[rightId].val
+        if left < right and left < self.A[i].val:
+            self.A[i], self.A[leftId] = self.A[leftId], self.A[i]
+            self.__down(leftId)
+        elif right < self.A[i].val:
+            self.A[i], self.A[rightId] = self.A[rightId], self.A[i]
+            self.__down(rightId)
+
+    def top(self):
+        if self.A:
+            return self.A[0]
+
+class Solution:
+    def mergeKLists(self, lists):
+        mh = MinHeap()
+        for l in lists:
+            if l:
+                mh.push(l)
+
+        dummy = ListNode(0)
+        node = dummy
+
+        while mh.top():
+            tmp = mh.pop()
+            node.next = tmp
+            node = node.next
+            if node.next:
+                mh.push(node.next)
+
+        return dummy.next
+
+lists = [
+ListNode(0, ListNode(2, ListNode(4))),
+ListNode(-1, ListNode(3, ListNode(7))),
+ListNode(-1, ListNode(3.5, ListNode(5))),
+None,
+ListNode(100),
+ListNode(27)
+]
+
+inst = Solution()
+head = inst.mergeKLists(lists)
+
+while head:
+    print(head.val, end = ' ')
+    head = head.next
 print()
