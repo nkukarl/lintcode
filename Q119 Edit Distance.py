@@ -18,6 +18,16 @@ If word1[i] == word2[j], 0 edit is required, dp[i][j] = dp[i - 1][j - 1]
 Otherwise, one more edit is required and hence shall arise from 1 plus the smallest of dp[i - 1][j - 1], dp[i][j - 1] and dp[i - 1][j]
 dp[i][j] = min(dp[i - 1][j - 1], dp[i][j - 1], dp[i - 1][j]) + 1
 
+This will convert dp into
+      a  z  c  e  d
+  [0, 1, 2, 3, 4, 5]
+a [1, 0, 1, 2, 3, 4]
+b [2, 1, 1, 2, 3, 4]
+c [3, 2, 2, 1, 2, 3]
+d [4, 3, 3, 2, 2, 2]
+e [5, 4, 4, 3, 2, 3]
+f [6, 5, 5, 4, 3, 3]
+
 Return dp[-1][-1]
 
 '''
@@ -44,8 +54,8 @@ class Solution:
                 else:
                     dp[i][j] = min(dp[i - 1][j - 1], dp[i][j - 1], dp[i - 1][j]) + 1
 
-        # for line in dp:
-        #     print(line)
+        for line in dp:
+            print(line)
 
         return dp[-1][-1]
 
