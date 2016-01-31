@@ -58,8 +58,39 @@ class Solution:
 s = 'rabbbit'
 t = 'rabbit'
 
+'''
+
+
+        r   a   b   b   i   t
+    1   0   0   0   0   0   0
+r   1   1   0   0   0   0   0
+a   1   1   1   0   0   0   0
+b   1   1   1   1   0   0   0
+b   1   1   1   2   1   0   0
+b   1   1   1   3   3   0   0
+i   1   1   1   3   3   3   0
+t   1   1   1   3   3   3   3
+'''
+
 s = 'aacecscesec'
-t = 'ces'
+t = 'aces'
+
+'''
+        a   c   e   s
+    1   0   0   0   0
+a   1   1   0   0   0
+a   1   2   0   0   0
+c   1   2   2   0   0
+e   1   2   2   2   0
+c   1   2   4   2   0
+s   1   2   4   2   2
+c   1   2   6   2   2
+e   1   2   6   8   2
+s   1   2   6   8   10
+e   1   2   6   14  10
+c   1   2   8   14  10
+
+'''
 
 inst = Solution()
 print(inst.numDistinct(s, t))
