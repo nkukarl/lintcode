@@ -1,3 +1,15 @@
+'''
+Thoughts:
+
+Append the new interval to intervals and then sort intervals based on the start of each interval
+Initialise res to [intervals[0]]
+Iterate the intervals, if the start of current interval is smaller than or equal to the end of the last interval of res, update the end of the last interval to the larger one of the end of the last interval of res and the end of the current interval
+If the start of current interval is greater than the end of the last interval, append the current interval of res
+
+Return res
+
+'''
+
 class Interval:
 	def __init__(self, start, end):
 		self.start, self.end = start, end
