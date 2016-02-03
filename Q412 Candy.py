@@ -1,3 +1,14 @@
+'''
+Thoughts:
+
+Denote the length of ratings as n
+Initialise candies to [1] * n
+
+Iterate ratings from 1 to n - 1, if ratings[i] > ratings[i - 1], let candies[i] be candies[i - 1] + 1
+Iterate ratings in the reverse order, from n - 2 to 0, if ratings[i] > ratings[i + 1], let candies[i] be the larger value of candies[i] and candies[i + 1] + 1
+
+'''
+
 class Solution:
 	def candy(self, ratings):
 		n = len(ratings)
