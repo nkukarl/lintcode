@@ -1,3 +1,13 @@
+'''
+Thoughts:
+
+Similar to Maximum Depth of Binary Tree
+
+The difference is that if a root has either left or right child only, the we shall return the minimum depth of the left or right child plus 1
+We shall only return 1 plus the minimum of the minimum depth of the left and right child when both children are not None
+
+'''
+
 class TreeNode:
 	def __init__(self, val):
 		self.val = val
