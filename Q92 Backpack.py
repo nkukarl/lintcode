@@ -27,7 +27,11 @@ In terms of implementation, let tmp equal the bottom row of dp
 While the last element of tmp is 0, it is popped out
 Return the length of tmp minus 1
 
-
+Since the value of dp[i][j] is only related to the values in the above row, an array instead of a matrix can be used for dp
+The optimised solution initialises dp to [1] + [0] * m
+The iterations are the same, yet in the outer loop, a tmp array is initialised to [1] and the calculated value is appended to tmp for each inner loop
+dp is then updated to tmp at the end of each outer loop iteration
+To find out the maximum size, dp is then processed using the implementation mentioned above
 
 '''
 
